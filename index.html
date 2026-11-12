@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quilt Party — Stitch, Sip &amp; Socialize</title>
+  <style>
+    /* Reset & Base Styles */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: #fdf8f2;
+      color: #2f2a26;
+      line-height: 1.6;
+    }
+
+    /* Navigation Menu */
+    .navbar {
+      background-color: #fffdf9;
+      border-bottom: 2px dashed #e07a5f;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      padding: 1rem 2rem;
+    }
+
+    .nav-container {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .brand-logo {
+      font-family: 'Georgia', serif;
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #3d405b;
+      text-decoration: none;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 1.75rem;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #3d405b;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: #e07a5f;
+    }
+
+    .nav-cta {
+      background-color: #e07a5f;
+      color: #ffffff !important;
+      padding: 0.55rem 1.2rem;
+      border-radius: 6px;
+      transition: background-color 0.2s ease !important;
+    }
+
+    .nav-cta:hover {
+      background-color: #c9654b;
+    }
+
+    /* Full-Width 16:9 Hero Banner */
+    .hero-banner {
+      width: 100%;
+      overflow: hidden;
+      background-color: #f4ece1;
+      border-bottom: 4px solid #3d405b;
+    }
+
+    .hero-banner img {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-height: 82vh;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    /* Intro Action Strip Below Banner */
+    .hero-intro {
+      background-color: #fffdf9;
+      padding: 3rem 1.5rem;
+      text-align: center;
+      border-bottom: 1px solid #eadfce;
+    }
+
+    .hero-intro-content {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .hero-intro h1 {
+      font-family: 'Georgia', serif;
+      font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+      color: #3d405b;
+      margin-bottom: 0.75rem;
+    }
+
+    .hero-intro p {
+      color: #5c554f;
+      font-size: 1.1rem;
+      margin-bottom: 1.75rem;
+    }
+
+    .btn-group {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      text-decoration: none;
+      font-weight: 600;
+      padding: 0.85rem 1.75rem;
+      border-radius: 6px;
+      transition: transform 0.2s ease, background-color 0.2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      background-color: #e07a5f;
+      color: #ffffff;
+    }
+
+    .btn-primary:hover {
+      background-color: #c9654b;
+    }
+
+    .btn-secondary {
+      border: 2px solid #3d405b;
+      color: #3d405b;
+    }
+
+    .btn-secondary:hover {
+      background-color: #3d405b;
+      color: #ffffff;
+    }
+
+    /* Sample Event Details Section */
+    .main-content {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 4rem 1.5rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .info-card {
+      background: #fffdf9;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 6px 20px rgba(61, 64, 91, 0.06);
+      outline: 2px dashed #81b29a;
+      outline-offset: -10px;
+    }
+
+    .info-card h2 {
+      font-family: 'Georgia', serif;
+      color: #3d405b;
+      font-size: 1.35rem;
+      margin-bottom: 0.5rem;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #3d405b;
+      color: #fdf8f2;
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Header -->
+  <header class="navbar">
+    <nav class="nav-container" aria-label="Main Navigation">
+      <a href="#" class="brand-logo">Quilt Party</a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#schedule">Schedule</a></li>
+        <li><a href="#supplies">What to Bring</a></li>
+        <li><a href="https://rosecottagequilts.ca/view-calendar.php" class="nav-cta">Book Now</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Full-Width Hero Banner -->
+  <section class="hero-banner" aria-label="Quilt Party Hero Banner">
+    <!-- Replace src with the filename of your saved 16:9 banner image -->
+    <img src="Quilt_Party_16-9.jpg" alt="Illustrated patchwork banner reading Quilt Party">
+  </section>
+
+  <!-- Supporting Headline & Buttons Below Artwork -->
+  <section class="hero-intro" id="about">
+    <div class="hero-intro-content">
+      <h1>Stitch, Sip &amp; Socialize Together</h1>
+      <p>
+        Bring your unfinished projects, and enjoy a day of sewing<br>and conversation with fellow makers.
+      </p>
+      <h2>All Skill Levels Welcome</h2>
+      <p>Whether you are piecing your very first nine-patch<br>or finishing a king-size quilt, come join the fun.</p>
+      <p id="schedule">Most Thursdays 10-4.  Coffee will be ready by 10:30</p>
+      <div class="btn-group">
+        <a href="https://rosecottagequilts.ca/view-calendar.php" class="btn btn-primary">Book Your Seat</a>
+      </div>
+      </div>
+  </section>
+
+  <!-- Event Highlights -->
+  <main class="main-content" id="supplies">
+    <article class="info-card">
+      <h2>Sewing Stations</h2>
+      <p>A solid desk for your sewing machine (big enough to accommodate an embroidery module as well) and a side table with cutting mat.</p>
+    </article>
+    
+	 <article class="info-card">
+      <h2>Ironing Stations</h2>
+      <p>Four irons on ironing boards set up and ready to share.  Please do not bring your iron without checking with us first.</p>
+    </article>
+
+    <article class="info-card">
+      <h2>What to Bring</h2>
+      <p>Your sewing machine with all necessary accessories, thread, bobbins, rotary cutter, rulers ... in other words, come self-contained.</p>
+    </article>
+  </main>
+  <hr style="border: 0; height: 0; border-top: 1px solid rgba(0, 0, 0, 0.1); border-bottom: 1px solid rgba(255, 255, 255, 0.3);">
+<!-- Digital Signage links -->
+ <section class="hero-intro">
+ <div class="hero-intro-content">
+    <br>
+    <h2>View our in-store digital signage</h2>
+    <br>
+      <div class="btn-group">
+        <a href="https://quilt.free.nf/Bernina" class="btn btn-primary">Bernina</a>
+        <a href="https://quilt.free.nf/Brother" class="btn btn-primary">Brother</a>
+      </div>
+      <br><br>
+    </div>
+ </section>
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 Rose Cottage Quilt Shoppe. Made with love and patchwork.</p>
+  </footer>
+
+</body>
+</html>
